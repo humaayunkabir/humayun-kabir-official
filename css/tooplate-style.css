@@ -923,6 +923,22 @@ body.lb-disable-scrolling {
   #p2 .right-image img {
     width: 80%;
   }
+
+  ul .icon {
+    font-size: 27px;
+  }
+
+  ul {
+    width: 12%;
+  }
+
+  .page .icon {
+    right: 8%;
+  }
+
+  .page#p1 .icon {
+    margin-left: 12%;
+  }
 }
 
 @media only screen and (max-width: 460px) {
