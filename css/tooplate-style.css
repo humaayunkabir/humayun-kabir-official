@@ -50,9 +50,51 @@ section {
 #p1 {
   left: 0;
   background-image: url(../img/banner_hk.jpg);
-  background-image: url(../img/home-bg.png);
+  /* background-image: url(../img/home-bg.png); */
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom center;
+}
+
+/* #bg_p1 {
+  display: block;
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .35) 0, transparent 75%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, .35)), color-stop(75%, transparent));
+  background-color: #7588bbdc;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+ */
+#bg_p1 {
+  /* background: linear-gradient(-45deg, #7588bbe8, #a68a6de8, #8ead7de8, #8b7caee8);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%; */
+  background-color: #7588bbe8;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -364,11 +406,28 @@ a {
 #p3 .project-item img {
   width: 100%;
   overflow: hidden;
+  height: 235px;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+}
+
+#p3 .project-item img:hover {
+  filter: grayscale(0%);
 }
 
 #p3 .last-project {
   padding-bottom: 40px;
 }
+
+#p3 .row {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 970px;
+  margin: 0 auto;
+  /* max-height: 500px; */
+}
+
 
 #p4 .title {
   font-size: 15px;
@@ -625,7 +684,7 @@ body.lb-disable-scrolling {
 
 .lightbox {
   position: absolute;
-  margin-top: 5%;
+  margin-top: 1%;
   left: 0;
   width: 100%;
   z-index: 10000;
@@ -845,6 +904,18 @@ body.lb-disable-scrolling {
 @media only screen and (max-width: 767px) {
   #p2 .right-image img {
     width: 70%;
+  }
+
+  #p3 .project-item img {
+    height: 100%;
+  }
+
+  #p3 ._item {
+    width: 100%;
+  }
+
+  #p3 .row {
+    /* max-width: 400px; */
   }
 }
 
