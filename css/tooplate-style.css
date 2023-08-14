@@ -526,6 +526,8 @@ a {
 
 #p4 .right-info .social-icons {
   margin-top: 45px;
+  display: flex;
+  align-items: center;
 }
 
 #p4 .right-info ol {
